@@ -12,6 +12,8 @@ dotenv.config();
 const PORT=process.env.PORT||5000;
 const app=express();
 
+app.use(express.json());//for req.body
+
 app.use("/api/users",userRoutes);
 app.use("/api/auth",authRoutes);
 app.use("/api/admin",adminRoutes);
