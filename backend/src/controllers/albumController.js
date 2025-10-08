@@ -3,7 +3,7 @@ export const getAllAlbums =async (req, res,next) => {
     // Logic to get all albums
    try {
     const album=await Album.find();
-    res.statsus(200).json(album);//without obj
+    res.status(200).json(album);//without obj
    } catch (error) {
     next(error);
    }
